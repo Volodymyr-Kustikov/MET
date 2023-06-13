@@ -1,0 +1,43 @@
+.explores {
+  &__item {
+    margin-bottom: 48px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+  @include onDesktop {
+    margin-bottom: 0;
+  }
+}
+
+.explore {
+  &__photo-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 24px;
+
+    margin-bottom: 24px;
+
+    @include onTablet {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    grid-column: 2 / 4;
+    width: 100%;
+  }
+
+  &__name {
+    color: $main-red;
+    text-align: center;
+  }
+
+  &__description {
+    text-align: center;
+  }
+}

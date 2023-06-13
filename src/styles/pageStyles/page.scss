@@ -1,0 +1,45 @@
+.page {
+  font-family: "Cinzel", sans-serif;
+  scroll-behavior: smooth;
+  
+  &__body {
+    margin: 0;
+    color: #161616;
+
+    &--with-menu {
+      overflow: hidden;
+    }
+  }
+
+  &__section {
+    margin-bottom: 100px;
+    padding: $padding-top 24px 0 20px;
+
+    &-underTitle {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    @include onTablet {
+      margin-bottom: 140px;
+      padding: $padding-top 76px 0 72px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 140px;
+      padding: $padding-top 124px 0 120px;
+    }
+
+    &-title {
+      display: flex;
+      justify-content: center;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 32px;
+      letter-spacing: -1.5px;
+      color: #161616;
+    }
+  }
+
+}

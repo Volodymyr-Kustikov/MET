@@ -1,0 +1,61 @@
+.header {
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+
+  box-sizing: border-box;
+  height: 100vh;
+  padding: $padding-top 24px 288px 20px;
+
+  background-image: url(../../images/photos/image1.png);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+
+  &__logo {
+    height: $tablet-size * 3;
+  }
+  
+  @include onTablet {
+    padding: 50px 83px 250px 72px;
+  }
+ 
+  @include onDesktop {
+    padding: 50px 120px 300px;
+  }
+   
+  .top-actions {
+    @include top-actions-style;
+  }
+    
+  &__contacts {
+    position: relative;
+  }
+
+  &__contacts > &__call-description {
+    display: none;
+  }
+
+  @include onDesktop {
+    &__contacts:hover > &__call-description {
+      display: inline-block;
+      position: absolute;
+      font-size: 16px;
+      right: 50px;
+      top: -27px;
+      font-weight: 700;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+    text-align: center;
+    font-family: inherit;
+
+    @include onTablet {
+      font-size: 64px;
+    }
+  }
+}

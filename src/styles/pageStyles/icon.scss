@@ -1,0 +1,50 @@
+.icon {
+  width: $tablet-size;
+  display: block;
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--logo {
+    background-image: url(../../images/photos/logo.png);
+    height: $tablet-size;
+    /* 
+    necessary height === $tablet-size * 3
+    neccessary weigth === $tablet-size * 4 
+    */
+  }
+
+  &--menu {
+    background-image: url(../../images/menu.svg);
+    height: $tablet-size;
+    
+    &:hover {
+      background-image: url(../../images/menu_hover.svg);
+    }
+  }
+  
+  &--phone {
+    background-image: url(../../images/phone.svg);
+    height: $desktop-size;
+  }
+  
+  &--cross {
+    background-image: url(../../images/cross.svg);
+    height: $desktop-size;
+  }
+
+  @include onTablet {
+    width: $desktop-size;
+  }
+
+}
+
+.twoIcons {
+  display: flex;
+  gap: 30px;
+
+  @include onTablet {
+    gap: 63px;
+  }
+}

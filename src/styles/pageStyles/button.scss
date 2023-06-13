@@ -1,0 +1,28 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid $main-red;
+  background-color: $main-red;
+
+  transition: all 0.3s;
+
+  &--primary {
+    font-family: inherit;
+  }
+
+  &:hover {
+    background-color: #ae1c23;
+    cursor: pointer;
+  }
+
+  &:focus {
+    background-color: #eb343d;
+  }
+}
